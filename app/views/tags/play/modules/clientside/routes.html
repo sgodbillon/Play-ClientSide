@@ -1,18 +1,6 @@
 <script type="text/javascript" src="/public/play/modules/clientside/routes.js"></script>
 #{if !noAutoLoad}
 <script type="text/javascript"">
-	play.modules.clientside.Router.load("@{play.modules.clientside.ClientSideController.exportAllRoutes}", function(router) {
-		play.modules.clientside.router = router;
-	});
-	play.modules.clientside.waitForRouter = function(callback) {
-		if(typeof callback === "function") {
-			var id = setInterval(function() {
-				if(play.modules.clientside.router) {
-					clearInterval(id)
-					callback(play.modules.clientside.router)
-				}
-			}, 10);
-		}
-	} 
+	play.modules.clientside.router = new play.modules.clientside.Router().init(${play.modules.clientside.Routes.getJSONForAllRoutes().raw()});
 </script>
 #{/}
