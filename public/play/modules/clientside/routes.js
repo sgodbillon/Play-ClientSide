@@ -45,9 +45,9 @@
 			result = result.replace("{" + params[i] + "}", argument);
 		}
 		return result;
-	};
+	}
 	
-	function Router() { };
+	function Router() { }
 	
 	Router.prototype = {
 		reverse: function(action) {
@@ -57,7 +57,7 @@
 				if(result) return;
 				if(route.action === action)
 					result = route.reverse.apply(route, args);
-			})
+			});
 			return result;
 		},
 		init: function(data) {
@@ -70,7 +70,7 @@
 					route.patternArgs.push(patternArg[0].substring(1, patternArg[0].length - 1));
 				}
 				route.reverse = _reverse;
-			})
+			});
 			return this;
 		}
 	};
@@ -90,7 +90,7 @@
 			}
 		};
 		req.send(null);
-	}
+	};
 	
 	mpkg(window, "play.modules.clientside".split(".")).Router = Router;
 })();

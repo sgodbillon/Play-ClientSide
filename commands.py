@@ -1,6 +1,6 @@
 # Here you can create play commands that are specific to the module, and extend existing commands
 
-MODULE = 'play-clientside'
+MODULE = 'clientside'
 
 # Commands that are specific to your module
 

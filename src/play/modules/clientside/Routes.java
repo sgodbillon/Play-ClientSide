@@ -18,13 +18,15 @@ public class Routes {
         public List<List<String>> params;
         public String method;
     }
+
+    public static final String CACHE_KEY = "play-clientside.json.routes.all";
     
 	public static String getJSONForAllRoutes() {
-		String json = Cache.get("play-clientside.json.routes.all", String.class);
+		String json = Cache.get(CACHE_KEY, String.class);
 		if(json == null) {
 			System.out.println("cache miss");
 			json = makeJSONFor(Router.routes);
-			Cache.add("play-clientside.json.routes.all", json);
+			Cache.add(CACHE_KEY, json);
 		}else System.out.println("was in cache");
 		return json;
 	}

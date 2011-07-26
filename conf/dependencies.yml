@@ -1,5 +1,4 @@
-self: play -> play-clientside 0.1
+self: play -> clientside 0.1
 
 require:
     - play
-    - bytecodeparser 0.2
