@@ -1,0 +1,1 @@
+play.modules.clientside.router = new play.modules.clientside.Router().init(${routesJson.raw()});

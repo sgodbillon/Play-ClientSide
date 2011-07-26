@@ -1,6 +1,4 @@
 <script type="text/javascript" src="/public/play/modules/clientside/routes.js"></script>
 #{if !noAutoLoad}
-<script type="text/javascript">
-	play.modules.clientside.router = new play.modules.clientside.Router().init(${play.modules.clientside.Routes.getJSONForAllRoutes().raw()});
-</script>
+<script type="text/javascript" src="@{play.modules.clientside.ClientSideController.allJsRoutes()}"></script>
 #{/}

@@ -5,3 +5,4 @@
 #
 # ~~~~
 GET		/routes/all				play.modules.clientside.ClientSideController.exportAllRoutes
+GET   /routes/all.js    play.modules.clientside.ClientSideController.allJsRoutes
