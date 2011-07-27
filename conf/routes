@@ -4,5 +4,7 @@
 # *     /                       module:clientside
 #
 # ~~~~
-GET		/routes/all				play.modules.clientside.ClientSideController.exportAllRoutes
+
+GET		/routes					play.modules.clientside.ClientSideController.exportAllRoutes
+GET		/routes/{category}
 GET   /routes/all.js    play.modules.clientside.ClientSideController.allJsRoutes
